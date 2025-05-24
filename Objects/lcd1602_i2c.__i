@@ -1,0 +1,1 @@
+"driver\lcd1602_i2c.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(.\driver;.\sys) DEBUG OBJECTEXTEND PRINT(.\Listings\lcd1602_i2c.lst) TABS (2) OBJECT(.\Objects\lcd1602_i2c.obj)

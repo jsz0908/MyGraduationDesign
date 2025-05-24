@@ -1,0 +1,1 @@
+"driver\hx711.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(.\driver;.\sys) DEBUG OBJECTEXTEND PRINT(.\Listings\hx711.lst) TABS (2) OBJECT(.\Objects\hx711.obj)

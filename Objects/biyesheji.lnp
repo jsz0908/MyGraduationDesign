@@ -1,0 +1,11 @@
+".\Objects\main.obj",
+".\Objects\hx711.obj",
+".\Objects\i2c.obj",
+".\Objects\lcd1602_i2c.obj",
+".\Objects\key.obj",
+".\Objects\eeprom.obj",
+".\Objects\led.obj",
+".\Objects\timer.obj",
+".\Objects\delay.obj" 
+TO ".\Objects\biyesheji" 
+PRINT(".\Listings\biyesheji.m51") RAMSIZE(256) 

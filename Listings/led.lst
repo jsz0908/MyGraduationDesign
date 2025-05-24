@@ -1,0 +1,56 @@
+C51 COMPILER V9.60.0.0   LED                                                               05/15/2025 00:40:38 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LED
+OBJECT MODULE PLACED IN .\Objects\led.obj
+COMPILER INVOKED BY: E:\keil5\C51\BIN\C51.EXE driver\led.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\driver;.\sys) DEBUG OBJECTE
+                    -XTEND PRINT(.\Listings\led.lst) TABS(2) OBJECT(.\Objects\led.obj)
+
+line level    source
+
+   1          #include "led.h"
+   2          #include <reg52.h>
+   3          
+   4          sbit RED_LED    = P3^7;
+   5          sbit YELLOW_LED = P3^6;
+   6          sbit GREEN_LED  = P3^5;
+   7          
+   8          
+   9          void UpdateBMILeds(float bmi) {
+  10   1          if (bmi < 18.5) {
+  11   2              RED_LED = 1;  
+  12   2              YELLOW_LED = 0;
+  13   2              GREEN_LED = 0;
+  14   2              
+  15   2          } else if (bmi >= 18.5 && bmi <= 23.9) {
+  16   2              YELLOW_LED = 1;   // е§ГЃ
+  17   2              RED_LED = 0;  
+  18   2              GREEN_LED = 0;
+  19   2          } else {
+  20   2              RED_LED = 1;     // ГЌжи
+  21   2              YELLOW_LED = 0;
+  22   2              GREEN_LED = 0;
+  23   2          }
+  24   1      }
+  25          
+  26          void TurnOffLeds(void) {
+  27   1          RED_LED = 0;
+  28   1          YELLOW_LED = 0;
+  29   1          GREEN_LED = 0;
+  30   1      }
+  31          
+  32          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     94    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
